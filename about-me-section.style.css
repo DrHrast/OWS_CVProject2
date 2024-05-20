@@ -1,0 +1,51 @@
+@import url(utility-class.css);
+
+#about-me {
+  margin: 0px;
+  padding: 0px;
+}
+
+#about-me > .content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+}
+
+.personal-info {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  border: #42cf26 solid;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  border-radius: 0px 0px 15px 15px;
+  background: #111111;
+}
+
+.round-picture {
+  flex: 1;
+  height: 40%;
+}
+
+.profile-picture {
+  border-radius: 100%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  flex: 3;
+  border-left: #4e4e4e 2px dashed;
+}
+
+.contact {
+  flex: 1;
+}
+
+.exp-and-skills {
+  flex: 4;
+}

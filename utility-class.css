@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+.inline-p {
+  display: inline-block;
+}
+
+.bold-p {
+  font-weight: bolder;
+}
+
+.font-poppins {
+  font-family: "Poppins";
+}
