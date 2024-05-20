@@ -1,0 +1,35 @@
+This is attempt no.2
+It will be all in one page sliding side to side
+
+//To mark finished tasks add "(X)" in front of the task text
+//To mark new added tasks add "(A)" in front of the task text
+//To mark tasks that are in progress add "(U)" in front of the task text
+//To mark tasks you got stuck on add "(err)" in front of the task text
+
+To-Do List - ChatGPT generated
+1. Setup Project Structure
+    (X) Create the necessary HTML, CSS, and JavaScript files.
+    (X) Plan the layout and structure of your website sections.
+    
+2. HTML Structure
+    (X) Define the basic structure of your website in index.html.
+    Create sections for Command Prompt, Portfolio, CV/About Me, and Contact Form.
+    Animation button used in previous project will be form button
+
+3. CSS Styling
+    (U) Create a basic stylesheet for layout and design.
+    Define styles for horizontal scrolling and section transitions.
+    Add styles for different screen sizes to ensure responsiveness.
+
+4. JavaScript Functionality
+    Implement horizontal scrolling and navigation.
+    Add event listeners for mouse scroll, click, and drag.
+    Implement fade-in and fade-out animations for section transitions.
+
+5. Responsive Design
+    Ensure the website is fully responsive and works well on different screen sizes and devices.
+    Use media queries to adjust layouts and styles.
+
+6. Accessibility
+    Ensure all interactive elements are accessible via keyboard.
+    Add ARIA roles and attributes as necessary.
