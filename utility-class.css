@@ -8,6 +8,13 @@
   font-weight: bolder;
 }
 
+.bold-green-p {
+  font-weight: bolder;
+  color: #2a8b16;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
 .font-poppins {
   font-family: "Poppins";
 }
