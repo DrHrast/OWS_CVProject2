@@ -13,6 +13,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  color: #dadada;
 }
 
 .personal-info {
@@ -101,7 +102,7 @@
 
 .experience-style {
   break-inside: avoid;
-  background: #f4f4f4;
+  background: #3b3b3b;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -156,13 +157,13 @@
 }
 
 .category img {
-  width: 50px; /* Adjust the size as needed */
-  height: 50px; /* Adjust the size as needed */
+  width: 50px; 
+  height: 50px; 
   margin-bottom: 5px;
 }
 
 .category p {
   margin: 0;
   font-size: 1rem;
-  color: #4e4e4e;
+  color: #dadada;
 }
