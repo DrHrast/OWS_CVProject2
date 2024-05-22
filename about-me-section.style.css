@@ -1,79 +1,65 @@
 @import url(utility-class.css);
 
 #about-me {
-  margin: 0px;
   padding: 0px;
+  margin: 0px;
 }
 
 #about-me > .content {
-  display: flex;
-  flex-direction: column;
+  margin: 0px;
+  padding: 2px;
   height: 100%;
   width: 100%;
-  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .personal-info {
-  flex: 1;
   display: flex;
-  flex-direction: row;
-  border: #42cf26 solid;
-  border-top: 0px;
-  /* border-right: 0px;
-  border-left: 0px; */
-  border-radius: 0px 0px 15px 15px;
-  background: #111111;
-  height: 30%;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: #111;
+  border: solid #42cf26;
+  border-width: 0 0 3px 0;
+  border-radius: 0 0 15px 15px;
+  padding: 12px;
 }
 
 .round-picture {
-  flex: 2;
+  flex: 1 1 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .profile-picture {
-  border-radius: 100%;
-  height: 80%;
+  border-radius: 50%;
+  width: 75%;
+  max-width: 150px;
 }
 
-.info {
-  flex: 2;
-  border-left: #4e4e4e 2px dashed;
+.info, .contact, .languages {
+  flex: 1 1 200px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin: 0px;
-  padding: 0px;
+  gap: 7px;
   justify-content: center;
 }
 
-.info > div > p,
-.contact > div > p {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding: 0px;
+.bold-green-p {
+  font-weight: bold;
+  color: #42cf26;
 }
 
-.contact, 
-.languages {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin: 0px;
-  padding: 0px;
-  justify-content: center;
-  align-items: start;
+.inline-p {
+  display: inline-block;
+  margin: 0 5px;
 }
 
 .individual-languages {
   display: flex;
-}
-
-.individual-languages > p {
-  margin: 0px;
+  align-items: center;
 }
 
 .slider-line {
@@ -81,10 +67,9 @@
   height: 4px;
   width: 150px;
   background: #42cf26;
-  border: 1px solid black;
-  border-radius: 20px;
-  top: 45%;
-  margin-left: 20px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  margin-left: 10px;
 }
 
 .slider-button {
@@ -94,35 +79,90 @@
   background: #4e4e4e;
   border: 1px solid #42cf26;
   border-radius: 50%;
-  top: -4px;
+  top: -3px;
 }
 
-.cro {
-  transform: translateX(50px);
-}
-
-.eng {
-  transform: translateX(80px);
-}
-
-.rus {
-  transform: translateX(99px);
-}
-
-.ger {
-  transform: translateX(50px);
-}
+.cro { transform: translateX(50px); }
+.eng { transform: translateX(80px); }
+.rus { transform: translateX(99px); }
+.ger { transform: translateX(50px); }
 
 .exp-and-skills {
-  flex: 3;
   display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
 .experience {
-  margin-top: 10px;
+  flex: 1.5;
+  column-count: 2;
+  column-gap: 20px;
+}
+
+.experience-style {
+  break-inside: avoid;
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.skills {
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.skills .bold-h {
+  margin-bottom: 10px;
+  color: #42cf26;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-list li {
+  margin-bottom: 10px;
+}
+
+.skill-category {
+  font-weight: bold;
+  color: #4e4e4e;
+}
+
+.general-skills {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.general-skills .bold-h {
+  margin-bottom: 10px;
+  color: #42cf26;
+}
+
+.driving-categories {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.category {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  /*TODO:
-  flex-wrap: inherit; */
+  align-items: center;
+}
+
+.category img {
+  width: 50px; /* Adjust the size as needed */
+  height: 50px; /* Adjust the size as needed */
+  margin-bottom: 5px;
+}
+
+.category p {
+  margin: 0;
+  font-size: 1rem;
+  color: #4e4e4e;
 }

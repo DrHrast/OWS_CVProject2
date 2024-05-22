@@ -69,7 +69,10 @@
 
 .form-message > textarea {
   border-radius: 20px 10px;
-  height: 180px;
+  height: 180px;  
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: large;
 }
 
 .form > button {
