@@ -34,3 +34,32 @@ body {
 .section.active {
   opacity: 1;
 }
+
+.home-button-fixed {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #42cf26;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  height: 1.9vh;
+  width: 0.5vh;
+}
+
+.home-button-fixed:hover {
+    background-color: #37a320;
+}
+
+.home-image {
+  position: relative;
+  height: 20px;
+  margin: 0px;
+  padding: 0px;
+  left: -7px;
+}

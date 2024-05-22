@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "stands at the forefront of the tech industry\n" +
     "pushing the boundaries of innovation.\n\n";
   const cmdCode = document.getElementById("cmd-code");
-  let currentSectionIndex = 2;
+  let currentSectionIndex = 0;
 
   function activateSection(index) {
     sections.forEach((section, i) => {
@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
   typeWritter(text, cmdCode);
 });
 
+//TODO: Form does not work, needs fixing
 document
   .querySelector(".contact-form")
   .addEventListener("submit", function (event) {
@@ -68,7 +69,15 @@ document
 
     // Perform form submission logic (e.g., AJAX request)
     console.log("Form submitted:", { name, email, subject, message });
+
+    document.getElementById("name").value = "";
   });
+
+  document.addEventListener("click", function () {
+    const button = document.getElementById("home-button-fixed");
+    currentSectionIndex = 0;
+    activateSection(currentSectionIndex);
+  })
 
 function typeWritter(text, element) {
   let index = 0;

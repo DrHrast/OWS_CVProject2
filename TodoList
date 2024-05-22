@@ -13,15 +13,16 @@ To-Do List - ChatGPT generated
     
 2. HTML Structure
     (X) Define the basic structure of your website in index.html.
-    Create sections for Command Prompt, Portfolio, CV/About Me, and Contact Form.
+    (X) Create sections for Command Prompt, Portfolio, CV/About Me, and Contact Form.
     Probably won't - Animation button used in previous project will be form button
 
 3. CSS Styling
-    (U) Create a basic stylesheet for layout and design.
+    (X) Create a basic stylesheet for layout and design.
     Define styles for horizontal scrolling and section transitions.
     Add styles for different screen sizes to ensure responsiveness.
 
 4. JavaScript Functionality
+    Fix everything or start js over.
     Implement horizontal scrolling and navigation.
     Add event listeners for mouse scroll, click, and drag.
     Implement fade-in and fade-out animations for section transitions.
