@@ -14,7 +14,12 @@ To-Do List - ChatGPT generated
 2. HTML Structure
     (X) Define the basic structure of your website in index.html.
     (X) Create sections for Command Prompt, Portfolio, CV/About Me, and Contact Form.
-    Probably won't - Animation button used in previous project will be form button
+    (Discarded) - Probably won't - Animation button used in previous project will be form button
+    (U) - Portfolio part:
+        * Create the portfolio section with divs and SVG icons.
+        * Add hover effects to show an extend icon.
+        * Create a modal to display project details when the extend icon is clicked.
+        * Add functionality to close the modal.
 
 3. CSS Styling
     (X) Create a basic stylesheet for layout and design.

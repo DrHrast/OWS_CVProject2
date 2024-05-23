@@ -1,3 +1,5 @@
+import { setupModalFunctionality } from './modal.js';
+
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll(".section");
   const text =
@@ -20,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "stands at the forefront of the tech industry\n" +
     "pushing the boundaries of innovation.\n\n";
   const cmdCode = document.getElementById("cmd-code");
-  let currentSectionIndex = 0;
+  let currentSectionIndex = 2;
 
   function activateSection(index) {
     sections.forEach((section, i) => {
@@ -97,3 +99,5 @@ function typeWritter(text, element) {
   }
   type();
 }
+
+setupModalFunctionality();

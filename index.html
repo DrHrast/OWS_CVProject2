@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curriculum vitae</title>
     <link rel="stylesheet" href="index.style.css" />
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
   </head>
   <body class="font-poppins">
     <div class="container">
@@ -21,22 +21,6 @@
             <p id="cmd-code"></p>
             <p class="inline-p">C:\Users\Petar> Scroll:</p>
             <p class="inline-p underline"></p>
-          </div>
-        </div>
-      </section>
-      <section id="portfolio" class="section">
-        <div class="content">
-          <div class="first-project">
-            <div class="images"></div>
-            <div class="descpription"></div>
-          </div>
-          <div class="second-project">
-            <div class="images"></div>
-            <div class="descpription"></div>
-          </div>
-          <div class="third-project">
-            <div class="images"></div>
-            <div class="descpription"></div>
           </div>
         </div>
       </section>
@@ -158,6 +142,25 @@
             </div>
         </div>
       </section>
+      <section id="portfolio" class="section">
+        <div class="portfolio-items">
+          <div class="portfolio-wrapper">
+            <img src="/Images/mail-automatization-projec-white.svg" alt="first-project-icon" class="project-icon">
+          </div>
+          <div class="portfolio-wrapper"> 
+            <img src="/Images/playing-cards-16-svgrepo-com-white.svg" alt="second-project-icon" class="project-icon">
+          </div>
+          <div class="portfolio-wrapper"> 
+            <img src="/Images/casino-gambling-game-svgrepo-com-white.svg" alt="third-project-icon" class="project-icon">
+          </div>
+          <div class="portfolio-wrapper"> 
+            <img src="" alt="fourth-project-icon" class="project-icon">
+          </div>
+          <div class="portfolio-wrapper"> 
+            <img src="" alt="fifth-project-icon" class="project-icon">
+          </div>
+        </div>
+      </section>
       <section id="contact" class="section">
         <div class="content">
           <div class="picture">
@@ -195,6 +198,28 @@
         </div>
       </section>
     </div>
-    <a href="index.html"><span class="home-button-fixed" id="home-button-fixed"><img src="/Images/home-1393-svgrepo-com.svg" alt="home-button" class="home-image"></span></a>
+    <a href="index.html">
+      <span class="home-button-fixed" id="home-button-fixed">
+        <img src="/Images/home-1393-svgrepo-com.svg" alt="home-button" class="home-image">
+      </span>
+    </a>
+    <!-- Modal for projects -->
+    <div id="project-modal" class="modal">
+      <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <div class="modal-container">
+            <div class="image-one">
+              <img src="/Images/automata-one.png" alt="project1">
+            </div>
+            <div class="image-two">
+              <img src="/Images/automata-two.PNG" alt="project1">
+            </div>
+            <div class="modal-text">
+                <h2>MailAutomata</h2>
+                <p>Project description goes here...</p>
+            </div>
+          </div>
+      </div>
+  </div>
   </body>
 </html>
