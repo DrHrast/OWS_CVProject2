@@ -103,5 +103,4 @@ function typeWritter(text, element) {
   type();
 }
 
-// Call the function to set up modal functionality
 setupModalFunctionality();

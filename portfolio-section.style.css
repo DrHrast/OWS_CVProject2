@@ -90,6 +90,7 @@
     display: flex;
     gap: 10px;
     margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .images > div > img {
@@ -106,7 +107,7 @@
 
 .modal-text {
     overflow: auto;
-    max-height: 290px;
+    max-height: 280px;
     white-space: normal;
     padding-right: 20px;
 }
@@ -127,6 +128,39 @@
     cursor: pointer;
 }
 
+/* Individual modal style*/
+#modal1 > .modal-content > .modal-container > .modal-text {
+    overflow: auto;
+    max-height: 430px;
+    white-space: normal;
+    padding-right: 20px;
+}
+
+#modal2 > .modal-content > .modal-container {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#modal2 > .modal-content > .modal-container > .images {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 12px;
+    padding: 0px;
+    gap: 15px;
+}
+
+#modal2 > .modal-content > .modal-container > .images > div > img {
+    height: auto;
+    max-height: 400px;
+    margin: 0px;
+    border: 2px solid #757575;
+    border-radius: 5px;
+}
+
+/*Close button*/
 .close-button:hover,
 .close-button:focus {
     color: black;
