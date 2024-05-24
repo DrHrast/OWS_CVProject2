@@ -1,44 +1,52 @@
-// modal.js
 export function setupModalFunctionality() {
     // Get all portfolio items
     const portfolioItems = document.querySelectorAll('.portfolio-wrapper');
+    // Get all modals
+    const modals = document.querySelectorAll('.modal');
+    // Get all close buttons
+    const closeButtons = document.querySelectorAll('.close-button');
 
-    // Create modal element
-    const modal = document.createElement('div');
-    modal.classList.add('modal');
-    document.body.appendChild(modal);
+    const container = document.getElementById('.container');
 
-    // Create modal content container
-    const modalContent = document.createElement('div');
-    modalContent.classList.add('modal-content');
-    modal.appendChild(modalContent);
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.style.display = "block";
+        document.body.classList.add("modal-open"); // Add class to body to disable scrolling
+        document.body.container.add("modal-open");
+    }
+    
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open"); // Remove class to enable scrolling
+        document.body.container.remove("modal-open");
+    }
 
-    // Create close button
-    const closeButton = document.createElement('span');
-    closeButton.classList.add('close-button');
-    closeButton.innerHTML = '&times;';
-    modalContent.appendChild(closeButton);
-
-    // Handle click on portfolio items
+    // Handle click on portfolio items to open the respective modal
     portfolioItems.forEach(item => {
         item.addEventListener('click', () => {
-            // Copy item content to modal
-            //modalContent.innerHTML = item.innerHTML;
-            modalContent.appendChild(closeButton); // Re-append close button
-            modal.style.display = 'block';
+            const modalId = item.getAttribute('data-modal');
+            openModal(modalId); // Call openModal function with the correct modalId
         });
     });
 
-    // Handle close button click
-    closeButton.addEventListener('click', () => {
-        modal.style.display = 'none';
+    // Handle click on close buttons to close the modal
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.closest('.modal').id;
+            closeModal(modalId); // Call closeModal function with the correct modalId
+        });
     });
 
-    // Handle click outside of modal content
+    // Handle click outside of modal content to close the modal
     window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
+        modals.forEach(modal => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                const modalId = modal.id;
+                closeModal(modalId); // Call closeModal function with the correct modalId
+            }
+        });
     });
 }
 

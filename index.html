@@ -144,20 +144,20 @@
       </section>
       <section id="portfolio" class="section">
         <div class="portfolio-items">
-          <div class="portfolio-wrapper">
-            <img src="/Images/mail-automatization-projec-white.svg" alt="first-project-icon" class="project-icon">
+          <div class="portfolio-wrapper" data-modal="modal1">
+              <img src="/Images/mail-automatization-projec-white.svg" alt="first-project-icon" class="project-icon">
           </div>
-          <div class="portfolio-wrapper"> 
-            <img src="/Images/playing-cards-16-svgrepo-com-white.svg" alt="second-project-icon" class="project-icon">
+          <div class="portfolio-wrapper" data-modal="modal2">
+              <img src="/Images/playing-cards-16-svgrepo-com-white.svg" alt="second-project-icon" class="project-icon">
           </div>
-          <div class="portfolio-wrapper"> 
-            <img src="/Images/casino-gambling-game-svgrepo-com-white.svg" alt="third-project-icon" class="project-icon">
+          <div class="portfolio-wrapper" data-modal="modal3">
+              <img src="/Images/casino-gambling-game-svgrepo-com-white.svg" alt="third-project-icon" class="project-icon">
           </div>
-          <div class="portfolio-wrapper"> 
-            <img src="" alt="fourth-project-icon" class="project-icon">
+          <div class="portfolio-wrapper" data-modal="modal4">
+              <img src="/Images/tic-tac-toe-svgrepo-com-white.svg" alt="fourth-project-icon" class="project-icon">
           </div>
-          <div class="portfolio-wrapper"> 
-            <img src="" alt="fifth-project-icon" class="project-icon">
+          <div class="portfolio-wrapper" data-modal="modal5">
+              <img src="/Images/web-rec-white.svg" alt="fifth-project-icon" class="project-icon">
           </div>
         </div>
       </section>
@@ -204,22 +204,122 @@
       </span>
     </a>
     <!-- Modal for projects -->
-    <div id="project-modal" class="modal">
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal">
       <div class="modal-content">
-          <span class="close-button">&times;</span>
-          <div class="modal-container">
-            <div class="image-one">
+        <span class="close-button">&times;</span>
+        <div class="modal-container">
+          <div class="image-one">
               <img src="/Images/automata-one.png" alt="project1">
-            </div>
-            <div class="image-two">
-              <img src="/Images/automata-two.PNG" alt="project1">
-            </div>
-            <div class="modal-text">
-                <h2>MailAutomata</h2>
-                <p>Project description goes here...</p>
-            </div>
           </div>
+          <div class="image-two">
+              <img src="/Images/automata-two.PNG" alt="project1">
+          </div>
+          <div class="modal-text">
+              <h2>MailAutomata</h2>
+              <p>Project description goes here...</p>
+          </div>
+        </div>
       </div>
-  </div>
+    </div>
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div class="modal-container">
+          <div class="image-one">
+            <img src="" alt="pcoject1">
+          </div>
+          <div class="image-two">
+              <img src="" alt="project2">
+          </div>
+          <div class="modal-text">
+              <h2>Bela Calc</h2>
+              <p>Project description goes here...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div class="modal-container">
+          <div class="image-one">
+            <img src="" alt="pcoject1">
+          </div>
+          <div class="image-two">
+              <img src="" alt="project2">
+          </div>
+          <div class="modal-text">
+              <h2>PhBet5</h2>
+              <p>Project description goes here...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 4 -->
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div class="modal-container">
+          <div class="image-one">
+            <img src="" alt="pcoject1">
+          </div>
+          <div class="image-two">
+              <img src="" alt="project2">
+          </div>
+          <div class="modal-text">
+              <h2>Java- TicTacToe</h2>
+              <p>Project description goes here...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 5 -->
+    <div id="modal5" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div class="modal-container">
+          <div class="image-one">
+            <img src="/Images/cv-recursion4.png" alt="pcoject1">
+          </div>
+          <div class="modal-text">
+            <h2>CV recursion</h2>
+            <p>This web-based CV is designed to present professional information, project showcases, and contact details in an engaging and interactive format. The webpage is structured to provide a clear and comprehensive overview of the individual's qualifications, experiences, and projects.</p>
+            <h2>Features:</h2>
+            <h3>1. Introduction Section:</h3>
+            <ul>
+                <li><strong>Overview:</strong> Provides a brief introduction to the individual, highlighting key professional attributes and career goals.</li>
+                <li><strong>Personal Information:</strong> Displays essential details such as name, date of birth, place of birth, contact information, and languages spoken.</li>
+            </ul>
+            <h3>2. CV Section:</h3>
+            <ul>
+                <li><strong>Experience:</strong> Lists professional experiences, including job titles, roles, and responsibilities, arranged in a visually appealing and organized manner.</li>
+                <li><strong>Skills:</strong> Highlights specific skills, both technical and general, with visual indicators of proficiency levels.</li>
+                <li><strong>Driving Categories:</strong> Displays driving categories (e.g., B, AM, A) in an interesting and clear format.</li>
+            </ul>
+            <h3>3. Portfolio Section:</h3>
+            <ul>
+                <li><strong>Project Icons:</strong> Displays various project icons in a visually appealing grid layout.</li>
+                <li><strong>Interactive Modals:</strong> Clicking on any project icon opens a detailed modal view with images and descriptions of the project, providing an in-depth look at the work.</li>
+            </ul>
+            <h3>4. Contact Section:</h3>
+            <ul>
+                <li><strong>Contact Form:</strong> Allows visitors to send messages directly through the website. The form includes fields for name, email, subject, and message.</li>
+                <li><strong>Social Media Links:</strong> Includes icons linking to social media profiles for additional contact options.</li>
+            </ul>
+            <h2>Technologies Used:</h2>
+            <ul>
+                <li><strong>HTML5:</strong> For the structure and content of the webpage.</li>
+                <li><strong>CSS3:</strong> For styling, layout, and responsive design to ensure the page looks good on all devices.</li>
+                <li><strong>JavaScript:</strong> For interactivity, including opening and closing modals and handling form submissions.</li>
+            </ul>
+            <h2>Purpose:</h2>
+            <p>The web CV serves as an online portfolio and resume, offering a modern and interactive way for potential employers and collaborators to explore the individual's professional background, skills, and projects. It combines clear presentation with engaging functionality, making it easy to navigate and visually appealing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

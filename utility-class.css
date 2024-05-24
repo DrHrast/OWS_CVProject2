@@ -41,3 +41,7 @@
 .white-svg {
   stroke: #dadada;
 }
+
+body.modal-open .container {
+  overflow: hidden;
+}

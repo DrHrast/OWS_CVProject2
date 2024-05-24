@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     document.querySelector(".container").style.transform = `translateX(-${
       index * 100
-    }vw)`;
+    }vw)`; 
   }
 
   function handleScroll(event) {
@@ -100,4 +100,5 @@ function typeWritter(text, element) {
   type();
 }
 
+// Call the function to set up modal functionality
 setupModalFunctionality();
