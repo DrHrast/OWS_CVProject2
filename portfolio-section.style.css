@@ -129,36 +129,52 @@
 }
 
 /* Individual modal style*/
-#modal1 > .modal-content > .modal-container > .modal-text {
+/* #modal1 > .modal-content > .modal-container > .modal-text1 {
     overflow: auto;
     max-height: 430px;
     white-space: normal;
     padding-right: 20px;
+} */
+.modal-text1 {
+    overflow-y: scroll;
+    height: auto;
+    max-height: 470px;
+    text-wrap: wrap;
 }
 
 #modal2 > .modal-content > .modal-container {
     display: flex;
     justify-content: left;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
 }
 
-#modal2 > .modal-content > .modal-container > .images {
+#modal2 > .modal-content > .modal-container > .modal-text2 {
+    flex: 1;
+    overflow: auto;
+    max-height: 800px;
+    width: auto;
+    white-space: normal;
+    padding-right: 5px;
+    margin: 35px 0px 50px 30px;
+}
+
+.images2 {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    margin-top: 12px;
+    margin-top: 0px;
     padding: 0px;
-    gap: 15px;
+    gap: 10px;
 }
 
-#modal2 > .modal-content > .modal-container > .images > div > img {
+#modal2 > .modal-content > .modal-container > .images2 > div > img {
     height: auto;
-    max-height: 400px;
+    max-height: 380px;
     margin: 0px;
     border: 2px solid #757575;
     border-radius: 5px;
-}
+} 
 
 /*Close button*/
 .close-button:hover,
