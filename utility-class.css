@@ -42,6 +42,6 @@
   stroke: #dadada;
 }
 
-body.modal-open .container {
+.modal-open {
   overflow: hidden;
 }

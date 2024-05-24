@@ -1,4 +1,4 @@
-import { setupModalFunctionality } from './modal.js';
+import { setupModalFunctionality, isModalOpenFunc } from './modal.js';
 
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll(".section");
@@ -38,6 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function handleScroll(event) {
+    if (isModalOpenFunc()) {
+      return;
+    }
     if (event.deltaY > 0) {
       if (currentSectionIndex < sections.length - 1) {
         currentSectionIndex++;
