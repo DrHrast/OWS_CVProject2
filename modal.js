@@ -7,16 +7,24 @@ export function setupModalFunctionality() {
 
     function openModal(modalId) {
         const modal = document.getElementById(modalId);
-        modal.style.display = "block";
-        document.body.classList.add("modal-open");
-        isModalOpen = true;
+        if (modal) {
+            modal.style.display = "block";
+            document.body.classList.add("modal-open");
+            isModalOpen = true;
+        } else {
+            console.error(`Modal with ID ${modalId} not found`);
+        }
     }
-    
+
     function closeModal(modalId) {
         const modal = document.getElementById(modalId);
-        modal.style.display = "none";
-        document.body.classList.remove("modal-open");
-        isModalOpen = false;
+        if (modal) {
+            modal.style.display = "none";
+            document.body.classList.remove("modal-open");
+            isModalOpen = false;
+        } else {
+            console.error(`Modal with ID ${modalId} not found`);
+        }
     }
 
     portfolioItems.forEach(item => {
@@ -36,7 +44,6 @@ export function setupModalFunctionality() {
     window.addEventListener('click', (event) => {
         modals.forEach(modal => {
             if (event.target === modal) {
-                modal.style.display = 'none';
                 const modalId = modal.id;
                 closeModal(modalId);
             }
