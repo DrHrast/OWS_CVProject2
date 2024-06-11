@@ -6,6 +6,8 @@
     <title>Curriculum vitae</title>
     <link rel="stylesheet" href="index.style.css" />
     <script type="module" src="index.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body class="font-poppins">
     <div class="container">
@@ -204,10 +206,15 @@
       </span>
     </a>
     <!-- Modal for projects -->
-    <!-- Modal 1 -->
-    <div class="modal" id="modal1">
-      <div class="modal-content1">
-        <span class="close-button">&times;</span>
+<!-- Modal 1 -->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal1Label">MailAutomata Project</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
         <div class="images1">
           <div class="images-one-one">
             <img src="/Images/automata-one.png" alt="project1">
@@ -255,19 +262,23 @@
         </div>
       </div>
     </div>
-    <!-- Modal 2 -->
-    <div class="modal" id="modal2">
-      <div class="modal-content2">
-        <span class="close-button">&times;</span>
-        <div class="images2">
-          <div class="images-two-one">
-            <img src="/Images/BelaSemafor.png" alt="pcoject1">
+    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal2Label">Bela Score Calculator</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="images-two-two">
-            <img src="/Images/BelaSemafor2.png" alt="project2">
-          </div>
-        </div>
-        <div class="modal-text2">
+          <div class="modal-body">
+            <div class="images2">
+              <div class="images-two-one">
+                <img src="/Images/BelaSemafor.png" alt="pcoject1">
+              </div>
+              <div class="images-two-two">
+                <img src="/Images/BelaSemafor2.png" alt="project2">
+              </div>
+            </div>
+            <div class="modal-text2">
           <h1>Bela Score Calculator</h1>
           <p>The Bela Score Calculator is an Android application designed to simplify scorekeeping for the card game Bela. The app keeps track of the game score, calls, and displays the results in an easy-to-read grid format. It also saves scores and games in a database for future reference.</p>
           <h2>Features:</h2>
@@ -406,5 +417,9 @@
         </div>
       </div>
     </div>
+    
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

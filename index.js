@@ -1,5 +1,3 @@
-import { setupModalFunctionality, isModalOpenFunc } from './modal.js';
-
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll(".section");
   const text =
@@ -34,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     document.querySelector(".container").style.transform = `translateX(-${
       index * 100
-    }vw)`; 
+    }vw)`;
   }
 
   function handleScroll(event) {
@@ -58,35 +56,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   activateSection(currentSectionIndex);
   typeWritter(text, cmdCode);
+
+  // Attach click event listeners to portfolio items
+  const portfolioItems = document.querySelectorAll(".portfolio-wrapper");
+  portfolioItems.forEach(item => {
+    item.addEventListener("click", function () {
+      const modalId = item.getAttribute("data-modal");
+      const modal = new bootstrap.Modal(document.getElementById(modalId));
+      modal.show();
+    });
+  });
 });
 
-//TODO: Form does not work, needs fixing
-document
-  .querySelector(".contact-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the default form submission
+// Check if any modal is open
+function isModalOpenFunc() {
+  return document.querySelectorAll('.modal.show').length > 0;
+}
 
-    // Gather form data
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const subject = document.getElementById("subject").value;
-    const message = document.getElementById("message").value;
-
-    // Perform form submission logic (e.g., AJAX request)
-    console.log("Form submitted:", { name, email, subject, message });
-
-    document.getElementById("name").value = "";
-  });
-
-  document.addEventListener("click", function () {
-    const button = document.getElementById("home-button-fixed");
-    currentSectionIndex = 0;
-    activateSection(currentSectionIndex);
-  })
-
+// Typing effect function
 function typeWritter(text, element) {
   let index = 0;
-  const delay = 0;
+  const delay = 10;
 
   function type() {
     if (index < text.length) {
@@ -102,5 +92,3 @@ function typeWritter(text, element) {
   }
   type();
 }
-
-setupModalFunctionality();
