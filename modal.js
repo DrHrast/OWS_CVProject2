@@ -2,54 +2,54 @@ let isModalOpen = false;
 
 export function setupModalFunctionality() {
     const portfolioItems = document.querySelectorAll('.portfolio-wrapper');
-    const modals = document.querySelectorAll('.modal');
-    const closeButtons = document.querySelectorAll('.close-button');
 
-    function openModal(modalId) {
+    portfolioItems.forEach((item, index) => {
+        const modalId = `modal-content${index + 1}`;
+        const openButton = item;
+        const closeButton = document.querySelector(`#${modalId} .close-button`);
         const modal = document.getElementById(modalId);
-        if (modal) {
-            modal.style.display = "block";
-            document.body.classList.add("modal-open");
-            isModalOpen = true;
-        } else {
-            console.error(`Modal with ID ${modalId} not found`);
-        }
-    }
 
-    function closeModal(modalId) {
-        const modal = document.getElementById(modalId);
-        if (modal) {
-            modal.style.display = "none";
-            document.body.classList.remove("modal-open");
-            isModalOpen = false;
-        } else {
-            console.error(`Modal with ID ${modalId} not found`);
-        }
-    }
-
-    portfolioItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const modalId = item.getAttribute('data-modal');
-            openModal(modalId);
+        openButton.addEventListener('click', () => {
+            openModal(modal);
         });
-    });
 
-    closeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const modalId = button.closest('.modal').id;
-            closeModal(modalId);
+        closeButton.addEventListener('click', () => {
+            closeModal(modal);
         });
     });
 
     window.addEventListener('click', (event) => {
-        modals.forEach(modal => {
-            if (event.target === modal) {
-                const modalId = modal.id;
-                closeModal(modalId);
-            }
-        });
+        if (event.target.classList.contains('modal')) {
+            closeModal(event.target);
+        }
     });
+
+    window.addEventListener('keydown', (event) => {
+        if (event.key === "Escape") {
+            const openModal = document.querySelector('.modal.show');
+            if (openModal) {
+                closeModal(openModal);
+            }
+        }
+    });
+
+    function openModal(modal) {
+        if (modal) {
+            console.log(`Opening modal with ID: ${modal.id}`);
+            modal.classList.add('show');
+            document.body.classList.add("modal-open");
+        }
+    }
+
+    function closeModal(modal) {
+        if (modal) {
+            console.log(`Closing modal with ID: ${modal.id}`);
+            modal.classList.remove('show');
+            document.body.classList.remove("modal-open");
+        }
+    }
 }
+
 
 setupModalFunctionality();
 
