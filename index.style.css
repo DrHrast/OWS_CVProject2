@@ -3,6 +3,7 @@
 @import url(portfolio-section.style.css);
 @import url(intro.style.css);
 @import url(utility-class.css);
+@import url(responsivity.css);
 
 html,
 body {

@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "pushing the boundaries of innovation.\n\n";
     const cmdCode = document.getElementById("cmd-code");
     let currentSectionIndex = 2;
+    let isScrolling = false;
 
     function activateSection(index) {
         sections.forEach((section, i) => {
@@ -39,9 +40,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function handleScroll(event) {
-        if (isModalOpenFunc()) {
+        if (isModalOpenFunc() || isScrolling) {
             return;
         }
+        
+        isScrolling = true;
+
         if (event.deltaY > 0) {
             if (currentSectionIndex < sections.length - 1) {
                 currentSectionIndex++;
@@ -53,9 +57,68 @@ document.addEventListener("DOMContentLoaded", function () {
                 activateSection(currentSectionIndex);
             }
         }
+
+        setTimeout(() => {
+            isScrolling = false;
+        }, 2500); // Adjust timeout duration as needed
+    }
+
+    function handleKeydown(event) {
+        if (isModalOpenFunc()) {
+            return;
+        }
+        if (event.key === "ArrowRight") {
+            if (currentSectionIndex < sections.length - 1) {
+                currentSectionIndex++;
+                activateSection(currentSectionIndex);
+            }
+        } else if (event.key === "ArrowLeft") {
+            if (currentSectionIndex > 0) {
+                currentSectionIndex--;
+                activateSection(currentSectionIndex);
+            }
+        }
+    }
+
+    function handleTouchStart(event) {
+        if (isModalOpenFunc()) {
+            return;
+        }
+        this.touchStartX = event.touches[0].clientX;
+    }
+
+    function handleTouchMove(event) {
+        if (isModalOpenFunc() || !this.touchStartX) {
+            return;
+        }
+        this.touchEndX = event.touches[0].clientX;
+    }
+
+    function handleTouchEnd() {
+        if (isModalOpenFunc() || !this.touchStartX || !this.touchEndX) {
+            return;
+        }
+        const threshold = 50;
+        if (this.touchStartX - this.touchEndX > threshold) {
+            if (currentSectionIndex < sections.length - 1) {
+                currentSectionIndex++;
+                activateSection(currentSectionIndex);
+            }
+        } else if (this.touchEndX - this.touchStartX > threshold) {
+            if (currentSectionIndex > 0) {
+                currentSectionIndex--;
+                activateSection(currentSectionIndex);
+            }
+        }
+        this.touchStartX = null;
+        this.touchEndX = null;
     }
 
     window.addEventListener("wheel", handleScroll);
+    window.addEventListener("keydown", handleKeydown);
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchmove", handleTouchMove);
+    window.addEventListener("touchend", handleTouchEnd);
 
     activateSection(currentSectionIndex);
     typeWriter(text, cmdCode);

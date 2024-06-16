@@ -18,7 +18,7 @@ To-Do List - ChatGPT generated
     (U) - Portfolio part:
     (X) * Create the portfolio section with divs and SVG icons.
     (X) * Add hover effects to show an extend icon.
-        * Create a modal to display project details when the extend icon is clicked.
+    (X) * Create a modal to display project details when the extend icon is clicked.
     (X) * Add functionality to close the modal.
 
 3. CSS Styling
@@ -28,7 +28,7 @@ To-Do List - ChatGPT generated
 
 4. JavaScript Functionality
     (X) Fix everything or start js over.
-    Implement horizontal scrolling and navigation.
+    (X) Implement horizontal scrolling and navigation.
     Add event listeners for mouse scroll, click, and drag.
     Implement fade-in and fade-out animations for section transitions.
 
