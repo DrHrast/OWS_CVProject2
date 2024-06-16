@@ -16,18 +16,18 @@ To-Do List - ChatGPT generated
     (X) Create sections for Command Prompt, Portfolio, CV/About Me, and Contact Form.
     (Discarded) - Probably won't - Animation button used in previous project will be form button
     (U) - Portfolio part:
-        * Create the portfolio section with divs and SVG icons.
-        * Add hover effects to show an extend icon.
+    (X) * Create the portfolio section with divs and SVG icons.
+    (X) * Add hover effects to show an extend icon.
         * Create a modal to display project details when the extend icon is clicked.
-        * Add functionality to close the modal.
+    (X) * Add functionality to close the modal.
 
 3. CSS Styling
     (X) Create a basic stylesheet for layout and design.
-    Define styles for horizontal scrolling and section transitions.
+    (U) Define styles for horizontal scrolling and section transitions.
     Add styles for different screen sizes to ensure responsiveness.
 
 4. JavaScript Functionality
-    Fix everything or start js over.
+    (X) Fix everything or start js over.
     Implement horizontal scrolling and navigation.
     Add event listeners for mouse scroll, click, and drag.
     Implement fade-in and fade-out animations for section transitions.

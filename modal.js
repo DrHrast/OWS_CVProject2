@@ -38,6 +38,7 @@ export function setupModalFunctionality() {
             console.log(`Opening modal with ID: ${modal.id}`);
             modal.classList.add('show');
             document.body.classList.add("modal-open");
+            isModalOpen = true;
         }
     }
 
@@ -46,6 +47,7 @@ export function setupModalFunctionality() {
             console.log(`Closing modal with ID: ${modal.id}`);
             modal.classList.remove('show');
             document.body.classList.remove("modal-open");
+            isModalOpen = false;
         }
     }
 }
