@@ -1,7 +1,6 @@
 import { setupModalFunctionality, isModalOpenFunc } from './modal.js';
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Scroll-related functionality
     const sections = document.querySelectorAll(".section");
     const text =
         "C:\\Users\\Petar> type about_me.txt\n\n" +
@@ -23,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "stands at the forefront of the tech industry\n" +
         "pushing the boundaries of innovation.\n\n";
     const cmdCode = document.getElementById("cmd-code");
-    let currentSectionIndex = 2;
+    let currentSectionIndex = 0;
     let isScrolling = false;
 
     function activateSection(index) {
@@ -40,10 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function handleScroll(event) {
-        if (isModalOpenFunc() || isScrolling) {
+        if (isModalOpenFunc() || isScrolling || window.innerWidth <= 768) {
             return;
         }
-        
+
         isScrolling = true;
 
         if (event.deltaY > 0) {
@@ -60,11 +59,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         setTimeout(() => {
             isScrolling = false;
-        }, 2500); // Adjust timeout duration as needed
+        }, 800);
     }
 
     function handleKeydown(event) {
-        if (isModalOpenFunc()) {
+        if (isModalOpenFunc() || window.innerWidth <= 768) {
             return;
         }
         if (event.key === "ArrowRight") {
@@ -81,21 +80,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function handleTouchStart(event) {
-        if (isModalOpenFunc()) {
+        if (isModalOpenFunc() || window.innerWidth <= 768) {
             return;
         }
         this.touchStartX = event.touches[0].clientX;
     }
 
     function handleTouchMove(event) {
-        if (isModalOpenFunc() || !this.touchStartX) {
+        if (isModalOpenFunc() || !this.touchStartX || window.innerWidth <= 768) {
             return;
         }
         this.touchEndX = event.touches[0].clientX;
     }
 
     function handleTouchEnd() {
-        if (isModalOpenFunc() || !this.touchStartX || !this.touchEndX) {
+        if (isModalOpenFunc() || !this.touchStartX || !this.touchEndX || window.innerWidth <= 768) {
             return;
         }
         const threshold = 50;
@@ -114,11 +113,28 @@ document.addEventListener("DOMContentLoaded", function () {
         this.touchEndX = null;
     }
 
-    window.addEventListener("wheel", handleScroll);
-    window.addEventListener("keydown", handleKeydown);
-    window.addEventListener("touchstart", handleTouchStart);
-    window.addEventListener("touchmove", handleTouchMove);
-    window.addEventListener("touchend", handleTouchEnd);
+    function isSmallScreen() {
+        return window.innerWidth <= 768;
+    }
+
+    function toggleScrollHandling() {
+        if (isSmallScreen()) {
+            window.removeEventListener("wheel", handleScroll);
+            window.removeEventListener("keydown", handleKeydown);
+            window.removeEventListener("touchstart", handleTouchStart);
+            window.removeEventListener("touchmove", handleTouchMove);
+            window.removeEventListener("touchend", handleTouchEnd);
+        } else {
+            window.addEventListener("wheel", handleScroll);
+            window.addEventListener("keydown", handleKeydown);
+            window.addEventListener("touchstart", handleTouchStart);
+            window.addEventListener("touchmove", handleTouchMove);
+            window.addEventListener("touchend", handleTouchEnd);
+        }
+    }
+
+    window.addEventListener("resize", toggleScrollHandling);
+    toggleScrollHandling(); // Initial call to set the correct behavior
 
     activateSection(currentSectionIndex);
     typeWriter(text, cmdCode);
@@ -127,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Typing effect function
 function typeWriter(text, element) {
     let index = 0;
-    const delay = 50;
+    const delay = 10;
 
     function type() {
         if (index < text.length) {

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url(responsivity.css);
 
 .inline-p {
   display: inline-block;

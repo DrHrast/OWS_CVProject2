@@ -1,3 +1,5 @@
+@import url(responsivity.css);
+
 /* Portfolio items and modal */
 #portfolio {
     height: 100vh;
