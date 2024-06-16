@@ -33,8 +33,8 @@ To-Do List - ChatGPT generated
     Implement fade-in and fade-out animations for section transitions.
 
 5. Responsive Design
-    Ensure the website is fully responsive and works well on different screen sizes and devices.
-    Use media queries to adjust layouts and styles.
+    (X) Ensure the website is fully responsive and works well on different screen sizes and devices.
+    (X) Use media queries to adjust layouts and styles.
 
 6. Accessibility
     Ensure all interactive elements are accessible via keyboard.

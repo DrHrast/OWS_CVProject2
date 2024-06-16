@@ -93,7 +93,7 @@
 .modal-body {
     display: flex;
     flex-direction: column;
-    overflow-y: auto; /* Allow scrolling */
+    overflow-y: auto;
     flex-grow: 1;
 }
 
@@ -128,7 +128,7 @@
 .images4 img {
     max-width: 100%;
     height: auto;
-    max-height: 250px; /* Adjust as needed */
+    max-height: 250px;
     object-fit: cover;
     border: 1px solid #ccc;
     border-radius: 5px;

@@ -2,6 +2,7 @@ import { setupModalFunctionality, isModalOpenFunc } from './modal.js';
 
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll(".section");
+    const homeButton = document.getElementById("home-button-fixed");
     const text =
         "C:\\Users\\Petar> type about_me.txt\n\n" +
         ">>My name is Petar Huljek.\n\n" +
@@ -24,6 +25,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const cmdCode = document.getElementById("cmd-code");
     let currentSectionIndex = 0;
     let isScrolling = false;
+
+    
+    homeButton.addEventListener('click', (event) => {
+        currentSectionIndex = 0;
+        activateSection(currentSectionIndex);
+    })
 
     function activateSection(index) {
         sections.forEach((section, i) => {
@@ -134,13 +141,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.addEventListener("resize", toggleScrollHandling);
-    toggleScrollHandling(); // Initial call to set the correct behavior
+    toggleScrollHandling();
 
     activateSection(currentSectionIndex);
     typeWriter(text, cmdCode);
 });
 
-// Typing effect function
+// Type writer effect
 function typeWriter(text, element) {
     let index = 0;
     const delay = 10;
@@ -160,5 +167,4 @@ function typeWriter(text, element) {
     type();
 }
 
-// Setup modal functionality
 setupModalFunctionality();
