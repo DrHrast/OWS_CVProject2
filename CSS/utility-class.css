@@ -1,0 +1,44 @@
+@import url(fonts.css);
+@import url(responsivity.css);
+
+.inline-p {
+  display: inline-block;
+}
+
+.bold-p {
+  font-weight: bolder;
+}
+
+.bold-green-p {
+  font-weight: bolder;
+  color: #2a8b16;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.font-poppins {
+  font-family: "Poppins";
+}
+
+.bold-h {
+  font-weight: bold;
+}
+
+.experince-style {
+  color: rgb(250, 250, 255, 0.7);
+  border: 2px rgb(150, 150, 155, 0.3) dashed;
+  border-radius: 8px;
+  border-top: 0px;
+  padding: 15px;
+  text-wrap: auto;
+  display: inline-block;
+  width: 100%;
+}
+
+.date {
+  color: #2a8b16;
+}
+
+.white-svg {
+  stroke: #dadada;
+}

@@ -1,0 +1,120 @@
+@media (max-width: 780px) {
+  .container {
+      transform: none !important;
+      flex-direction: column !important;
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+  }
+  .section {
+      height: auto !important;
+      width: 100%;
+      margin: 10px;
+  }
+  html, body {
+      overflow-x: hidden !important;      
+      overflow-y: auto !important;
+  }
+
+  .home-button-fixed {
+    display: none !important;
+    align-items: center;
+      bottom: 10px;
+      left: 10px;
+      padding: 6px 12px;
+      font-size: 12px;
+      height: 3vh;
+      width: 1vh;
+  }
+
+  .content {
+      gap: 10px;
+  }
+
+  .info, .contact, .languages {
+      flex: 1 1 100%;
+      align-items: center;
+      text-align: center;
+  }
+
+  .slider-line {
+      width: 100px;
+  }
+
+  .exp-and-skills {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .experience {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-wrapper {
+      flex: 1 1 calc(50% - 40px);
+  }
+
+  .modal {
+    width: 85vw;
+    height: 80vh;
+  }
+
+  .modal-content1,
+  .modal-content2,
+  .modal-content3,
+  .modal-content4,
+  .modal-content5 {
+      width: 95%;
+      max-width: 95%;
+      height: 95%;
+  }
+
+  .images2 img {
+      max-height: 600px;
+  }
+
+  .images3 img,
+  .images5 img {
+      width: 600px;
+  }
+
+  #contact > .content {
+      flex-direction: column;
+      height: auto;
+  }
+
+  .picture {
+      padding: 20px 0;
+  }
+
+  .picture > img {
+      height: 50%;
+  }
+
+  .form {
+      width: 100%;
+      border-radius: 0;
+      border: none;
+      gap: 30px;
+  }
+
+  .form-title {
+      font-size: 30px;
+      margin-top: 40px;
+  }
+
+  .form-name,
+  .form-email,
+  .form-subject,
+  .form-message {
+      width: 90%;
+  }
+
+  .form > button {
+      width: 90%;
+  }
+
+  .picture {
+      display: hidden;
+  }
+}

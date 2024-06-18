@@ -1,0 +1,97 @@
+@import url(utility-class.css);
+@import url(responsivity.css);
+
+.cmd-window,
+.content {
+  width: 80%;
+  height: 80%;
+  padding: 20px;
+}
+
+.cmd-window {
+  border: 2px solid #808080;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.cmd-header {
+  background-color: #4e4e4e;
+  color: #ffffff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.cmd-close,
+.cmd-maximize,
+.cmd-minimize {
+  margin: 6px, 0px;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.cmd-maximize:hover,
+.cmd-minimize:hover {
+  background: #808080;
+  color: rgb(50, 50, 50);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cmd-close:hover {
+  background: rgb(204, 55, 55);
+  color: rgb(210, 210, 210);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cmd-title {
+  flex: 3;
+  margin-left: 5px;
+  padding-left: 0px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.cmd-code {
+  background-color: #000000;
+  color: #2a8b16;
+  font-family: Consolas, monospace;
+  padding: 10px;
+  height: 100%;
+  overflow: auto;
+  text-wrap: \n;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 0;
+  }
+  51%,
+  100% {
+    opacity: 1;
+  }
+}
+
+.underline::before {
+  content: "_";
+  font-weight: bolder;
+  animation: blink 1s infinite;
+}
+
+/*responsiveness*/
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .section {
+    width: 100%;
+    height: 100vh;
+  }
+}
