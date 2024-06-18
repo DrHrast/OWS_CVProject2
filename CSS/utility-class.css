@@ -16,6 +16,11 @@
   margin-left: 20px;
 }
 
+.skill-list li {
+  line-height: 20px;
+  margin-bottom: 25px;
+}
+
 .font-poppins {
   font-family: "Poppins";
 }

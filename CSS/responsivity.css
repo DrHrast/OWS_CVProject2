@@ -26,6 +26,13 @@
       width: 1vh;
   }
 
+  #intro {
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px;
+  }
+
   .content {
       gap: 10px;
   }
@@ -42,12 +49,21 @@
 
   .exp-and-skills {
       display: flex;
-      flex-direction: column;
+      flex-direction: column;      
+      padding-left: 10px;
+      padding-right: 10px;
+      justify-content: center;
   }
 
   .experience {
     display: flex;
     flex-direction: column;
+  }
+
+  .bold-green-p {
+    font-weight: bolder;
+    color: #2a8b16;
+    margin: 0px;
   }
 
   .portfolio-wrapper {
@@ -115,6 +131,10 @@
   }
 
   .picture {
-      display: hidden;
+      display: none;
+  }
+
+  .social-media {
+    margin-bottom: 20px;
   }
 }
