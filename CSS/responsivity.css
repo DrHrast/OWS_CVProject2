@@ -44,6 +44,10 @@
       text-align: center;
   }
 
+  .individual-languages {
+    line-height: 20px;
+  }
+
   .slider-line {
       width: 100px;
   }
