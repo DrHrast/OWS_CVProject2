@@ -9,6 +9,7 @@
       height: auto !important;
       width: 100%;
       margin: 10px;
+      opacity: 1 !important;
   }
   html, body {
       overflow-x: hidden !important;      
