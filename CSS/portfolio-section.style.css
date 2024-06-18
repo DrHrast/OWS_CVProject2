@@ -173,7 +173,7 @@
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
 }
 
 .close-button:hover,

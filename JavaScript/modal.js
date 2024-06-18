@@ -2,6 +2,7 @@ let isModalOpen = false;
 
 export function setupModalFunctionality() {
     const portfolioItems = document.querySelectorAll('.portfolio-wrapper');
+    const homeButton = document.getElementById("home-button-fixed");
 
     portfolioItems.forEach((item, index) => {
         const modalId = `modal-content${index + 1}`;
@@ -39,6 +40,7 @@ export function setupModalFunctionality() {
             modal.classList.add('show');
             document.body.classList.add("modal-open");
             isModalOpen = true;
+            homeButton.classList.add("hide");
         }
     }
 
@@ -48,6 +50,7 @@ export function setupModalFunctionality() {
             modal.classList.remove('show');
             document.body.classList.remove("modal-open");
             isModalOpen = false;
+            homeButton.classList.remove("hide");
         }
     }
 }
