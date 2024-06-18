@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function handleScroll(event) {
-        if (isModalOpenFunc() || isScrolling || window.innerWidth <= 768) {
+        if (isModalOpenFunc() || isScrolling || isSmallScreen()) {
             return;
         }
 
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function handleKeydown(event) {
-        if (isModalOpenFunc() || window.innerWidth <= 768) {
+        if (isModalOpenFunc() || isSmallScreen()) {
             return;
         }
         if (event.key === "ArrowRight") {
@@ -93,21 +93,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function handleTouchStart(event) {
-        if (isModalOpenFunc() || window.innerWidth <= 768) {
+        if (isModalOpenFunc() || isSmallScreen()) {
             return;
         }
         this.touchStartX = event.touches[0].clientX;
     }
 
     function handleTouchMove(event) {
-        if (isModalOpenFunc() || !this.touchStartX || window.innerWidth <= 768) {
+        if (isModalOpenFunc() || !this.touchStartX || isSmallScreen()) {
             return;
         }
         this.touchEndX = event.touches[0].clientX;
     }
 
     function handleTouchEnd() {
-        if (isModalOpenFunc() || !this.touchStartX || !this.touchEndX || window.innerWidth <= 768) {
+        if (isModalOpenFunc() || !this.touchStartX || !this.touchEndX || isSmallScreen()) {
             return;
         }
         const threshold = 50;
@@ -126,8 +126,9 @@ document.addEventListener("DOMContentLoaded", function () {
         this.touchEndX = null;
     }
 
+    const smallWindow = 768;
     function isSmallScreen() {
-        return window.innerWidth <= 768;
+        return window.innerWidth <= smallWindow;
     }
 
     function toggleScrollHandling() {
