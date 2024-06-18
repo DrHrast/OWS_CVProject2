@@ -33,6 +33,12 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     function activateSection(index) {
+        if (index === 0) {
+            homeButton.classList.add("hide");
+        }
+        else {
+            homeButton.classList.remove("hide");
+        }
         sections.forEach((section, i) => {
             if (i === index) {
                 section.classList.add("active");

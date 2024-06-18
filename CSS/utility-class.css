@@ -47,3 +47,7 @@
 .white-svg {
   stroke: #dadada;
 }
+
+.hide {
+  display: none;
+}
